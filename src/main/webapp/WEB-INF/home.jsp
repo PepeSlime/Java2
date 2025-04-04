@@ -16,7 +16,13 @@
         <% List<Genero> generos = (List<Genero>) request.getAttribute("generos"); %>
         <% if (generos != null) { %>
             <% for (Genero genero : generos) { %>
-                <li><%= genero.getNome() %></li>
+                <li>
+                    <%= genero.getNome() %>
+                    <form action="deletarGenero" method="post" style="display:inline;">
+                        <input type="hidden" name="id" value="<%= genero.getId() %>">
+                        <button type="submit">Excluir</button>
+                    </form>
+                </li>
             <% } %>
         <% } %>
     </ul>

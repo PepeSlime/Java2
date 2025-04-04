@@ -31,4 +31,10 @@ public class GeneroController {
         generoRepository.save(genero);
         return "redirect:/";
     }
+
+    @PostMapping("/deletarGenero")
+    public String deletarGenero(@RequestParam("id") Long id) {
+        generoRepository.deleteById(id);
+        return "redirect:/";
+    }
 }
