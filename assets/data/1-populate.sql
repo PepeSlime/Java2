@@ -1,3 +1,3 @@
 USE application;
 
-INSERT INTO users(username, password) VALUES ('admin', 'root');
+INSERT INTO genero (nome) VALUES ('Cartoon'), ('Fantasia'), ('Drama');
